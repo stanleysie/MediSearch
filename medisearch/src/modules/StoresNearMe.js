@@ -52,25 +52,27 @@ function StoresNearMe(props) {
                 })
             }
         } else {
-            API.store.get((response) => {
-                let list = [...response.data].map((val) => {
-                    return {
-                        key: val._id,
-                        store: val,
-                        distance: parseFloat((window.google.maps.geometry.spherical.computeDistanceBetween(
-                            new window.google.maps.LatLng(state.currentPosition.lat, state.currentPosition.lng),
-                            new window.google.maps.LatLng(val.location.lat, val.location.lng)
-                        )/1000).toFixed(3))              
-                    }
+            if(state.query === '') {
+                API.store.get((response) => {
+                    let list = [...response.data].map((val) => {
+                        return {
+                            key: val._id,
+                            store: val,
+                            distance: parseFloat((window.google.maps.geometry.spherical.computeDistanceBetween(
+                                new window.google.maps.LatLng(state.currentPosition.lat, state.currentPosition.lng),
+                                new window.google.maps.LatLng(val.location.lat, val.location.lng)
+                            )/1000).toFixed(3))              
+                        }
+                    })
+                    list = _.sortBy(list, ['distance']);
+    
+                    dispatch({
+                        type: 'setStores',
+                        value: list
+                    })
+                    props.updateLoading(false);
                 })
-                list = _.sortBy(list, ['distance']);
-
-                dispatch({
-                    type: 'setStores',
-                    value: list
-                })
-                props.updateLoading(false);
-            })
+            }
         }
     }
 
