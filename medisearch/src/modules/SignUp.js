@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useHistory } from 'react-router-dom'
 import { useGeneralContext } from '../utils/context'
-import { Button, Form, Grid, Header, Input, Responsive, Segment } from 'semantic-ui-react'
+import { Button, Form, Grid, Header, Image, Input, Responsive, Segment } from 'semantic-ui-react'
 import { NotificationManager } from 'react-notifications'
 
 /* LIBRARIES */
@@ -11,6 +11,9 @@ import { API } from '../utils/API'
 
 /* COMPONENTS */
 import Footer from '../components/Footer'
+
+/* ASSETS */
+import logo from '../assets/logo.png'
 
 /**
  * <SignUp  updateLoading />
@@ -105,11 +108,14 @@ function SignUp(props) {
                         padded='very' 
                         textAlign='center'
                         onSubmit={handleRegister}>
+                        <Image 
+                            src={logo} 
+                            size='medium' 
+                            centered />
                         <Header 
                             as='h1' 
                             textAlign='center'
                             className='login-logo'>
-                            MediSearch
                             <Header.Subheader>Register your store account.</Header.Subheader>
                         </Header>
                         <Form.Field

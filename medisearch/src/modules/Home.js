@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useHistory } from 'react-router-dom'
 import { useGeneralContext } from '../utils/context'
-import { Form, Grid, Header, Input, List, Responsive, Transition } from 'semantic-ui-react'
+import { Form, Grid, Header, Image, Input, List, Responsive, Transition } from 'semantic-ui-react'
 
 /* LIBRARIES */
 import _ from 'lodash'
@@ -11,6 +11,9 @@ import { API } from '../utils/API'
 
 /* COMPONENTS */
 import Footer from '../components/Footer'
+
+/* ASSETS */
+import logo from '../assets/logo.png'
 
 /**
  * <Home    updateLoading />
@@ -98,11 +101,14 @@ function Home(props) {
             columns='equal'>
             <Grid.Row verticalAlign='bottom'>
                 <Grid.Column textAlign='center'>
+                    <Image 
+                        src={logo} 
+                        size='medium' 
+                        centered />
                     <Header 
                         as='h1'
                         textAlign='center'
                         className='logo'>
-                        MediSearch
                         <Header.Subheader>Find medicine stores near you.</Header.Subheader>
                     </Header>
                 </Grid.Column>
