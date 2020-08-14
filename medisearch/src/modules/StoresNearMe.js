@@ -161,7 +161,7 @@ function StoresNearMe(props) {
                                                         verticalAlign='middle'>
                                                         <Grid.Row className='compact-element'>
                                                             <Grid.Column className='compact-element'>
-                                                                {`Price: ${formatter.format(val.store.products[0].price)}`}
+                                                                {`Price: ${formatter.format(parseInt(val.store.products[0].price/10)*10)} - ${formatter.format(parseInt((val.store.products[0].price/10) + 1)*10)}`}
                                                             </Grid.Column>
                                                             <Grid.Column>
                                                                 {`Stock: ${val.store.products[0].stock}`}
