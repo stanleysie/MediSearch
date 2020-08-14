@@ -1,0 +1,195 @@
+.web-grid {
+    margin: 0em !important;
+}
+.web-modal {
+    animation: fade 0.25s;
+}
+.compact-element {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.invisible-element {
+    visibility: hidden !important;
+}
+.navigation-bar {
+    background: #2EBFA5 !important;
+    color: #FFFFFF !important;
+    padding: 3vh 20px !important;
+    margin: auto !important;
+    border: none !important;
+}
+.modal-headers {
+    background-color: #2EBFA5 !important;
+    color: #FFFFFF !important;
+}
+.modal-buttons {
+    background-color: #2EBFA5 !important;
+    color: #FFFFFF !important;
+    width: 100px;
+    margin-bottom: 20px !important;
+}
+.menu-item {
+    font-weight: bold !important;
+    display: flex;
+    justify-content: center;
+}
+.menu-item:hover {
+    color: #4A4444 !important;
+}
+.dimmer-content {
+    flex: 1 !important;
+}
+.page-buttons {
+    background-color: #2EBFA5 !important;
+    color: #FFFFFF !important;
+}
+.page-content {
+    margin: 0em !important;
+    padding-top: 15vh !important;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.footer-wrapper {
+    background: #2C2C2C !important;
+    height: 10vh;
+}
+.footer-grid {
+    margin: 0em 5em !important;
+    padding-top: 0.5em !important;
+    color: #FFFFFF;
+}
+
+.logo {
+    color: #2EBFA5 !important;
+    font-weight: bold !important;
+    font-family: 'Segoe UI', Roboto !important;
+    font-size: 4rem !important;
+}
+.search-icon {
+    padding: 10px !important;
+}
+.search-list {
+    position: absolute;
+    width: 90%;
+    height: 25vh;
+    margin-left: 2% !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 5;
+}
+.list-item {
+    text-align: left;
+    padding-left: 1% !important;
+}
+.list-item:hover {
+    cursor: pointer;
+    background-color: #EBE6E6;
+}
+
+/* LOGIN */
+.login-logo {
+    color: #2EBFA5 !important;
+    font-weight: bold !important;
+    font-family: 'Segoe UI', Roboto !important;
+    font-size: 3rem !important;
+}
+.login-button {
+    background-color: #2EBFA5 !important;
+    color: #FFFFFF !important;
+}
+.sign-up-text {
+    color: #2EBFA5 !important;
+}
+.sign-up-link {
+    color: #2EBFA5 !important;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* PROFILE */
+.update-button {
+    background-color: #FF9F75 !important;
+    color: #FFFFFF !important;
+    width: 100px;
+}
+.upload-button {
+    background-color: #2EBFA5 !important;
+    color: #FFFFFF !important;
+    width: 120px;
+}
+.file-name {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.form-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+.opening-hour-field {
+    margin: 5px 0 !important;
+}
+.tab-wrapper {
+    height: 50vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.not-found {
+    display: flex;
+    justify-content: center;
+}
+.price-tag {
+    background-color: #FF9F75 !important;
+    color: #FFFFFF !important;
+    margin: 2px 4px 2px auto !important;
+}
+.update-account {
+    background-color: #FF9F75 !important;
+    color: #FFFFFF !important;
+    width: 150px;
+}
+.logout-button {
+    background-color: #2EBFA5 !important;
+    color: #FFFFFF !important;
+    margin: 20px auto !important;
+    width: 150px;
+}
+.delete-button {
+    background-color: #2EBFA5 !important;
+    color: #FFFFFF !important;
+    margin: 20px auto !important;
+    width: 150px;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: scale(0)
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-grid {
+        margin: 0em 1em !important;
+        color: #FFFFFF;
+    }
+    .page-content {
+        margin: 0em !important;
+        padding-top: 17.5vh !important;
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+}

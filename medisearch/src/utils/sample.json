@@ -1,0 +1,396 @@
+[
+	{
+		"store": "Mercury Drug",
+		"description": "",
+		"openingHours": ["07:00","12:00"],
+		"location": { "lat": 14.580510, "lng": 121.008860 },
+		"contact": [{
+			"name": "Store Landline",
+			"contact": "(02) 8563 7273",
+			"email": ""
+		}],
+		"products": [
+			{
+				"name": "Paracetamol Biogesic",
+				"description": "For headache",
+				"price": 35.25,
+				"stock": 23
+			},
+			{
+				"name": "Advil",
+				"description": "For headache",
+				"price": 45.25,
+				"stock": 205
+			},
+			{
+				"name": "Cotton Buds",
+				"description": "For ear cleaining or wound cleaning. 20 pcs pack",
+				"price": 46.15,
+				"stock": 62
+			},
+			{
+				"name": "Face Mask",
+				"description": "For covering face to be protected from virus and dust",
+				"price": 15.15,
+				"stock": 0
+			}
+		]
+	},
+	{
+		"store": "Mercury Drug Paco Paz (008)",
+		"description": "A branch of mercury drug store in Pedro Gil",
+		"openingHours": ["00:00","00:00"],
+		"location": { "lat": 14.578570, "lng": 120.995030  },
+		"contact": [{
+			"name": "Store Landline",
+			"contact": "(02) 8563 4702",
+			"email": ""
+		}],
+		"products": [
+			{
+				"name": "Paracetamol Biogesic",
+				"description": "For headache",
+				"price": 34.25,
+				"stock": 153
+			},
+			{
+				"name": "Advil",
+				"description": "For headache",
+				"price": 46.25,
+				"stock": 250
+			},
+			{
+				"name": "Cotton Buds",
+				"description": "For ear cleaining or wound cleaning. 20 pcs pack",
+				"price": 53.15,
+				"stock": 103
+			},
+			{
+				"name": "Face Mask",
+				"description": "For covering face to be protected from virus and dust",
+				"price": 15.15,
+				"stock": 1
+			}
+		]
+	},
+	{
+		"store": "VRJ Pharmacy",
+		"description": "",
+		"openingHours": ["07:00","12:00"],
+		"location": { "lat": 14.572340, "lng": 121.002190 },
+		"contact": [{
+			"name": "Store Landline",
+			"contact": "(02) 8562 7461",
+			"email": ""
+		}],
+		"products": [
+			{
+				"name": "Immune Pro",
+				"description": "Vitamine C to protect to strengthen immune system. 100 psc per box",
+				"price": 534.15,
+				"stock": 106
+			}
+		]
+	},
+	{
+		"store": "TGP The Generics Pharmacy",
+		"description": "",
+		"openingHours": ["08:00","21:00"],
+		"location": { "lat": 14.578530, "lng": 120.995320},
+		"contact": [{
+			"name": "Store Landline",
+			"contact": "",
+			"email": ""
+		}],
+		"products": [
+			{
+				"name": "Paracetamol Biogesic",
+				"description": "For headache",
+				"price": 35.25,
+				"stock": 513
+			},
+			{
+				"name": "Advil",
+				"description": "For headache",
+				"price": 42.25,
+				"stock": 456
+			},{
+				"name": "Immune Pro",
+				"description": "Vitamine C to protect to strengthen immune system. 100 psc per box",
+				"price": 434.15,
+				"stock": 115
+			},
+			{
+				"name": "Fern C",
+				"description": "Vitamine C to protect to strengthen immune system. 500 psc per box",
+				"price": 482.15,
+				"stock": 340
+			}
+		]
+	},
+	{
+		"store": "Generika Drugstore",
+		"description": "",
+		"openingHours": ["07:00","17:00"],
+		"location": { "lat": 14.57138, "lng": 120.99492 },
+		"contact": [{
+			"name": "Store Landline",
+			"contact": "(02) 8516 8054",
+			"email": ""
+		}],
+		"products": [
+			{
+				"name": "MicroB",
+				"description": "Iron supplement for blood regulation. 40 pcs per box",
+				"price": 251.15,
+				"stock": 456
+			},{
+				"name": "Immune Pro",
+				"description": "Vitamine C to protect to strengthen immune system. 100 psc per box",
+				"price": 444.15,
+				"stock": 453
+			},
+			{
+				"name": "Fern C",
+				"description": "Vitamine C to protect to strengthen immune system. 500 psc per box",
+				"price": 486.15,
+				"stock": 891
+			}
+		]
+	},
+	{
+		"store": "JIKM Pharmacy",
+		"description": "",
+		"openingHours": ["07:00","19:00"],
+		"location": { "lat": 14.57436, "lng": 120.99706},
+		"contact": [{
+			"name": "Store Landline",
+			"contact": "(02) 3484 0612",
+			"email": ""
+		}],
+		"products": [
+			{
+				"name": "MicroB",
+				"description": "Iron supplement for blood regulation. 40 pcs per box",
+				"price": 253.15,
+				"stock": 4456
+			},{
+				"name": "Immune Pro",
+				"description": "Vitamine C to protect to strengthen immune system. 100 psc per box",
+				"price": 445.15,
+				"stock": 153
+			},
+			{
+				"name": "Fern C",
+				"description": "Vitamine C to protect to strengthen immune system. 500 psc per box",
+				"price": 486.15,
+				"stock": 815
+			}
+		]
+	},
+	{
+		"store": "Daisy Skin Care Center And Pharmacy Incorporated",
+		"description": "",
+		"openingHours": ["07:00","19:00"],
+		"location": { "lat": 14.63091, "lng": 121.02071},
+		"contact": [{
+			"name": "Store Landline",
+			"contact": "(02) 8372 4456",
+			"email": ""
+		}],
+		"products": [
+			{
+				"name": "Paracetamol Biogesic",
+				"description": "For headache",
+				"price": 34.25,
+				"stock": 1515
+			},
+			{
+				"name": "Advil",
+				"description": "For headache",
+				"price": 43.25,
+				"stock": 221
+			},{
+				"name": "MicroB",
+				"description": "Iron supplement for blood regulation. 40 pcs per box",
+				"price": 253.15,
+				"stock": 4456
+			},{
+				"name": "Immune Pro",
+				"description": "Vitamine C to protect to strengthen immune system. 100 psc per box",
+				"price": 441.15,
+				"stock": 112
+			},
+			{
+				"name": "Fern C",
+				"description": "Vitamine C to protect to strengthen immune system. 500 psc per box",
+				"price": 481.15,
+				"stock": 85
+			}
+		]
+	},
+	{
+		"store": "Rose Pharmacy",
+		"description": "",
+		"openingHours": ["07:00","19:00"],
+		"location": { "lat": 14.6561, "lng": 121.0191},
+		"contact": [{
+			"name": "Store Landline",
+			"contact": "(02) 3413 5921",
+			"email": ""
+		}],
+		"products": [
+			{
+				"name": "Paracetamol Biogesic",
+				"description": "For headache",
+				"price": 36.25,
+				"stock": 1
+			},
+			{
+				"name": "Advil",
+				"description": "For headache",
+				"price": 43.12,
+				"stock": 21
+			},{
+				"name": "MicroB",
+				"description": "Iron supplement for blood regulation. 40 pcs per box",
+				"price": 252.15,
+				"stock": 41
+			},{
+				"name": "Immune Pro",
+				"description": "Vitamine C to protect to strengthen immune system. 100 psc per box",
+				"price": 446.15,
+				"stock": 21
+			},
+			{
+				"name": "Fern C",
+				"description": "Vitamine C to protect to strengthen immune system. 500 psc per box",
+				"price": 481.15,
+				"stock": 851
+			}
+		]
+	},
+	{
+		"store": "The Generics Pharmacy",
+		"description": "Located in: Shopwise Araneta",
+		"openingHours": ["07:00","19:00"],
+		"location": { "lat": 14.62062, "lng": 121.0525},
+		"contact": [{
+			"name": "Store Landline",
+			"contact": "(02) 8710 4264",
+			"email": ""
+		}],
+		"products": [
+			{
+				"name": "Paracetamol Biogesic",
+				"description": "For headache",
+				"price": 36.25,
+				"stock": 112
+			},
+			{
+				"name": "Bethadine",
+				"description": "For wound",
+				"price": 43.12,
+				"stock": 12
+			},{
+				"name": "MicroB",
+				"description": "Iron supplement for blood regulation. 40 pcs per box",
+				"price": 252.15,
+				"stock": 0
+			},{
+				"name": "Immune Pro",
+				"description": "Vitamine C to protect to strengthen immune system. 100 psc per box",
+				"price": 441.15,
+				"stock": 22
+			},
+			{
+				"name": "Fern C",
+				"description": "Vitamine C to protect to strengthen immune system. 500 psc per box",
+				"price": 485.15,
+				"stock": 82
+			}
+		]
+	},
+	{
+		"store": "TGP The Generics Pharmacy",
+		"description": "",
+		"openingHours": ["07:00","19:00"],
+		"location": { "lat": 14.62411, "lng": 121.00836},
+		"contact": [{
+			"name": "Store Landline",
+			"contact":  "",
+			"email": ""
+		}],
+		"products": [
+			{
+				"name": "Paracetamol Biogesic 25mg",
+				"description": "For headache",
+				"price": 33.25,
+				"stock": 1515
+			},
+			{
+				"name": "Advil",
+				"description": "For headache",
+				"price": 41.25,
+				"stock": 221
+			},{
+				"name": "MicroB",
+				"description": "Iron supplement for blood regulation. 40 pcs per box",
+				"price": 213.15,
+				"stock": 40
+			},{
+				"name": "Immune Pro",
+				"description": "Vitamine C to protect to strengthen immune system. 100 psc per box",
+				"price": 441.15,
+				"stock": 111
+			},
+			{
+				"name": "Fern C",
+				"description": "Vitamine C to protect to strengthen immune system. 500 psc per box",
+				"price": 481.15,
+				"stock": 10
+			}
+		]
+	},
+	{
+		"store": "Generika Drugstore",
+		"description": "",
+		"openingHours": ["07:00","19:00"],
+		"location": { "lat": 14.57138, "lng": 120.99492},
+		"contact": [{
+			"name": "Store Landline",
+			"contact": "(02) 8516 8054",
+			"email": ""
+		}],
+		"products": [
+			{
+				"name": "Paracetamol Biogesic 25mg",
+				"description": "For headache",
+				"price": 33.25,
+				"stock": 15
+			},
+			{
+				"name": "Advil",
+				"description": "For headache",
+				"price": 41.25,
+				"stock": 22
+			},{
+				"name": "MicroB",
+				"description": "Iron supplement for blood regulation. 40 pcs per box",
+				"price": 213.15,
+				"stock": 501
+			},{
+				"name": "Immune Pro",
+				"description": "Vitamine C to protect to strengthen immune system. 100 psc per box",
+				"price": 441.15,
+				"stock": 11
+			},
+			{
+				"name": "Fern C",
+				"description": "Vitamine C to protect to strengthen immune system. 500 psc per box",
+				"price": 481.15,
+				"stock": 115
+			}
+		]
+	}
+]
