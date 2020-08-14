@@ -27,7 +27,7 @@ router.post('/create', async (req, res) => {
         image: null,
         birPermit: null,
         openingHours: ['', ''],
-        location: { lat: 0, lng: 0},
+        location: { lat: 0, lng: 0, url: ''},
         contact: [],
         prodcuts: [],
         salt: ''

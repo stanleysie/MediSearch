@@ -19,7 +19,8 @@ const storeSchema = new Schema({
     openingHours: [],
     location: {
         lat: Number,
-        lng: Number
+        lng: Number,
+        url: String
     },
     contact: [],
     products: [],

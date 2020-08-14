@@ -1,7 +1,8 @@
 import axios from 'axios';
 axios.defaults.withCredentials = true;
 
-const APIKey = 'AIzaSyBXBicvJWd6dPUBZYnvn-9JeQ-89YrTIjg';
+// const APIKey = 'AIzaSyBXBicvJWd6dPUBZYnvn-9JeQ-89YrTIjg';
+const APIKey = 'AIzaSyCngHLrPCDHa_Ivdd_dtGInMnxbDtZGZVA';
 const URL = 'http://localhost:8000';
 
 const API = {

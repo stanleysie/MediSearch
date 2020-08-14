@@ -52,7 +52,25 @@ function StoresNearMe(props) {
                 })
             }
         } else {
-            props.updateLoading(false);
+            API.store.get((response) => {
+                let list = [...response.data].map((val) => {
+                    return {
+                        key: val._id,
+                        store: val,
+                        distance: parseFloat((window.google.maps.geometry.spherical.computeDistanceBetween(
+                            new window.google.maps.LatLng(state.currentPosition.lat, state.currentPosition.lng),
+                            new window.google.maps.LatLng(val.location.lat, val.location.lng)
+                        )/1000).toFixed(3))              
+                    }
+                })
+                list = _.sortBy(list, ['distance']);
+
+                dispatch({
+                    type: 'setStores',
+                    value: list
+                })
+                props.updateLoading(false);
+            })
         }
     }
 
@@ -155,7 +173,7 @@ function StoresNearMe(props) {
                                     <Grid.Row className='compact-element'>
                                         <Grid.Column textAlign='right'>
                                             <a 
-                                                href={`https://maps.google.com/maps/place/${val.store.location.lat},${val.store.location.lng}/@${val.store.location.lat},${val.store.location.lng},17z`} 
+                                                href={val.store.location.url} 
                                                 rel="noopener noreferrer"
                                                 target='_blank'>
                                                 See directions in Google Maps

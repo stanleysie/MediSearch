@@ -1,5 +1,5 @@
 /* REACT */
-import React, { useState, useEffect, createRef } from 'react'
+import React, { useState, useEffect, createRef, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { useGeneralContext } from '../utils/context'
 import { Button, Checkbox, Form, Grid, Header, Icon, Input, List, Radio, Responsive, TextArea } from 'semantic-ui-react'
@@ -24,11 +24,16 @@ function StoreInformation(props) {
     const [change, setChange] = useState(false);
     const [branch, setBranch] = useState(false);
     const [fullTime, setFullTime] = useState(false);
+    const [location, setLocation] = useState({
+        lat: 0, lng: 0, url: ''
+    }) 
     const [formState, setFormState] = useState({
-        name: '', address: '', branch: '', description: '', image: null, birPermit: null, contact: [], openingHours: []
+        name: '', branch: '', description: '', image: null, birPermit: null, contact: [], openingHours: []
     })
     const imageFileRef = createRef();
     const birPermitRef = createRef();
+    const autocompleteRef = createRef();
+    const addressRef = useRef('');
 
     /**
      * This function sets initial data.
@@ -36,13 +41,13 @@ function StoreInformation(props) {
     const setData = () => {
         let formStateClone = {...formState};
         formStateClone.name = store.name;
-        formStateClone.address = store.address;
         formStateClone.branch = store.branch;
         formStateClone.description = store.description;
         formStateClone.image = store.image;
         formStateClone.birPermit = store.birPermit;
         formStateClone.contact = [...store.contact];
         formStateClone.openingHours = [...store.openingHours];
+        addressRef.current = store.address;
         if(_.isEqual(formStateClone.openingHours, ['0', '0'])) {
             setFullTime(true);
             formStateClone.openingHours = ['', ''];
@@ -51,13 +56,20 @@ function StoreInformation(props) {
 
         if(window.google !== undefined) {
             var input = document.getElementById('search-address');
-            var options = {
-                types: ['address'],
-            }
-            let autocomplete = new window.google.maps.places.Autocomplete(input, options);
+            autocompleteRef.current = new window.google.maps.places.Autocomplete(input);
+            autocompleteRef.current.bindTo('bounds', state.map);
+            autocompleteRef.current.addListener('place_changed', () => {
+                let place = autocompleteRef.current.getPlace();
+                addressRef.current = place.formatted_address;
+                setChange(true);
+                setLocation({
+                    lat: place.geometry.location.lat(),
+                    lng: place.geometry.location.lng(),
+                    url: place.url
+                })
+            })
         } 
     }
-
     useEffect(setData, [store, state.map]);
 
     /**
@@ -72,7 +84,10 @@ function StoreInformation(props) {
         if(!branch) {
             storeClone.branch = '';
         }
+        storeClone.address = addressRef.current;
+        storeClone.location = location;
         setChange(false);
+        document.getElementById('search-address').value = '';
         props.handleUpdate(storeClone, false);
     }
 
@@ -83,10 +98,6 @@ function StoreInformation(props) {
      * @param { string } value - new value
      */
     const handleChange = (event, { name, value }) => {
-        if(name === 'address') {
-            // insert search box configuration
-        }
-
         let formStateClone = {...formState};
         formStateClone[name] = value;
         setFormState(formStateClone);
@@ -99,7 +110,7 @@ function StoreInformation(props) {
      */
     const checkStateChange = (form) => {
         if(form.name === store.name &&
-            form.address === store.address &&
+            addressRef.current === store.address &&
             form.branch === store.branch &&
             form.description === store.description &&
             form.image === store.image &&
@@ -143,15 +154,21 @@ function StoreInformation(props) {
                             placeholder='Store Name'
                             value={formState.name}
                             onChange={handleChange} />
+                        {store.address !== '' ?
+                            <Form.Field
+                                control={Input}
+                                type='text'
+                                label='Current Store Address'
+                                placeholder='Make it easy for people to visit your store.'
+                                readOnly={true}
+                                value={addressRef.current} />
+                        : null}
                         <Form.Field
                             control={Input}
                             id='search-address'
                             type='text'
-                            name='address'
-                            label='Store Address'
-                            placeholder='Make it easy for people to visit your store.'
-                            value={formState.address}
-                            onChange={handleChange} />
+                            label={store.address === '' ? 'Store Address' : 'New Store Address'}
+                            placeholder='Make it easy for people to visit your store.' />
                         <Form.Field label='Branch' />
                         <Grid
                             className='web-grid'
