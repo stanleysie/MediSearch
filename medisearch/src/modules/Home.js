@@ -48,6 +48,10 @@ function Home(props) {
                 })
             })
             setOptions(list);
+            dispatch({
+                type: 'setQuery',
+                value: ''
+            })
             props.updateLoading(false);
         })
     }
