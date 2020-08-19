@@ -69,13 +69,15 @@ function Home(props) {
         [...stores].forEach(val => {
             if(val.products.some(med => med.name.toLowerCase().includes(input.toLowerCase()))) {
                 val.products = [...val.products].filter(prod => prod.name.toLowerCase().includes(input.toLowerCase()));
-                list.push({
-                    store: val,
-                    distance: parseFloat((window.google.maps.geometry.spherical.computeDistanceBetween(
-                        new window.google.maps.LatLng(state.currentPosition.lat, state.currentPosition.lng),
-                        new window.google.maps.LatLng(val.location.lat, val.location.lng)
-                    )/1000).toFixed(3))
-                })
+                if(val.products[0].stock > 0) {
+                    list.push({
+                        store: val,
+                        distance: parseFloat((window.google.maps.geometry.spherical.computeDistanceBetween(
+                            new window.google.maps.LatLng(state.currentPosition.lat, state.currentPosition.lng),
+                            new window.google.maps.LatLng(val.location.lat, val.location.lng)
+                        )/1000).toFixed(3))
+                    })
+                }
             }
         })
         list = _.sortBy(list, ['distance']);

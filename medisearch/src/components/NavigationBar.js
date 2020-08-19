@@ -71,7 +71,7 @@ function NavigationBar() {
                         className='menu-item'
                         name='home'
                         content=''
-                        icon={<Icon name='home' size='big' />}
+                        icon={<Icon name='home' size='big' style={{ color: state.menu === 'home' ? '#FF9F75' : '#FFFFFF' }} />}
                         active={state.menu === 'home'}
                         onClick={handleChangeMenu} />
                 </Responsive>
@@ -92,7 +92,7 @@ function NavigationBar() {
                         className='menu-item'
                         name='stores'
                         content=''
-                        icon={<Icon name='medkit' size='big' />}
+                        icon={<Icon name='medkit' size='big' style={{ color: state.menu === 'stores' ? '#FF9F75' : '#FFFFFF' }} />}
                         active={state.menu === 'stores'}
                         onClick={handleChangeMenu} />
                 </Responsive>
@@ -113,7 +113,7 @@ function NavigationBar() {
                         className='menu-item'
                         name={state.user === null ? 'login' : 'profile'}
                         content=''
-                        icon={<Icon name='user' size='big' />}
+                        icon={<Icon name='user' size='big' style={{ color: state.menu === 'login' || state.menu === 'profile' ? '#FF9F75' : '#FFFFFF' }} />}
                         active={state.menu === 'profile' || state.menu === 'login'}
                         onClick={handleChangeMenu} />
                 </Responsive>
