@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import { GeneralProvider } from './utils/context'
 import * as serviceWorker from './serviceWorker';
+require('dotenv').config();
 
 ReactDOM.render(
     <GeneralProvider>
